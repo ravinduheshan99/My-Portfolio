@@ -1,0 +1,111 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-content {
+  text-align: center;
+}
+
+.headermain {
+  background-color: #183D3D;
+  margin: 0px 0px 0px 0px;
+  font-size: 50px;
+}
+
+.name {
+  color: black;
+}
+
+.blackpara {
+  color: black;
+}
+
+body {
+  background-color: white;
+}
+
+.proimg {
+  float: left;
+  border-radius: 200px;
+  margin: 30px 40px 50px 20px;
+
+}
+
+h1 {
+  color: white;
+  margin: 80px 40px 20px 20px;
+}
+
+h3 {
+  color: white;
+  margin-left: 20px;
+}
+
+.subheadings {
+  color: white;
+  margin-top: 30px;
+}
+
+
+.subheadingsaboutme {
+  color: black;
+}
+
+p {
+  color: white;
+  margin-left: 15px;
+  line-height: 40px;
+  font-size: 25px;
+}
+
+li::marker {
+  color: yellow;
+}
+
+.listitems {
+  line-height: 10px;
+}
+
+.bolded {
+  color: yellow;
+}
+
+.bolded2 {
+  color: rgb(12, 240, 171);
+}
+
+.section04-2 {
+  display: flex;
+}
+
+.section04-2-1 {
+  margin-right: 200px;
+}
+
+.section05 {
+  margin: 0px 0px 0px 0px;
+  background-color: #183D3D;
+}
+
+.Education {
+  margin-top: 0px;
+}
+
+.wrkexp {
+  margin-top: 30px;
+}
+
+.blueback {
+  background-color: #183D3D;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+}
