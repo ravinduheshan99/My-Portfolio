@@ -1,141 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravindu Haputhanthri</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ravindu Haputhanthri-Profile</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <nav id="desktop-nav">
+      <div class="logo">Ravindu Haputhanthri</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<body>
-
-  <div class="header-content">
-    <h1 class="headermain"><u>Welcome To My Profile</u></h1>
-  </div>
-
-  <div class="header">
-    <img class="proimg" width="250px" height="250px" src="Images/01.jpg" alt="Profile Picture Not Found">
-    <h1 class="name">Ravindu Haputhanthri</h1>
-    <p class="blackpara">Computer Science Major<br>Contact No : 0775165666<br>Email : ravinduheshan99@gmail.com<br>GitHub : <a
-        href="https://github.com/dashboard" target="_blank">github.com/ravinduheshan99</a><br>Linkedin : <a
-        href="https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/"
-        target="_blank">linkedin.com/in/ravinduheshan99</a><br>Skills : Java, C, C#, HTML, CSS, JavaScript, Python, SQL,
-      Prolog
-    </p>
-  </div>
-
-  <div class="sectionaboutme">
-    <h1 class="subheadingsaboutme">ABOUT ME</h1>
-    <p class="blackpara">Dedicated and self - driven individual who is motivated by
-      understanding deficiencies in own skills. Is passionate in
-      academic work and has come up with many instances that
-      reveal the ability in team work and true skills in problem solving.
-      Would love to work with team members while leading or
-      supporting them to deliver successful outcomes.</p>
-    <hr>
-  </div>
-
-  <div class="blueback">
-    <div class="section01">
-      <h1 class="Education">EDUCATION</h1>
-      <ul>
-  
-        <li>
-          <p><b class="bolded">Bachelor of Science Honours (Undergraduate)&nbsp;&nbsp;&nbsp;2021-Present</b><br>
-            University Of Kelaniya, Sri Lanka<br>(Computer Science-Level 3)
-          </p>
-        </li>
-  
-        <li>
-          <p><b class="bolded">Completed Ditec Diploma in C#(.Net)&nbsp;&nbsp;&nbsp;2019-2020</b><br>
-            Esoft Metro Campus Kandy</p>
-        </li>
-  
-        <li>
-          <p><b class="bolded">Expected Graduation : May 2025</b></p>
-        </li>
-      </ul>
-      <hr>
-    </div>
-  
-    <div class="section02">
-      <h1 class="wrkexp">WORK EXPERIENCE</h1>
-      <ul>
-        <li>
-          <p><b class="bolded">
-              IT Lab Instructor</b><br>
-            Esoft Metro Campus Kandy<br>
-            February 2020 to May 2020</p>
-        </li>
-  
-        <li><b class="bolded">
-            <p>Branch Manager
-          </b><br>
-          Vithanage Enterprises Pvt (Ltd) Kandy<br>
-          July 2020 to July 2021</p>
-        </li>
-      </ul>
-      <hr>
-    </div>
-  
-    <div class="section03">
-      <h1 class="subheadings">PROJECTS</h1>
-      <ul>
-        <li>
-          <p><b class="bolded">Vehicle Sale Management System</b><br>
-            Developed a comprehensive C# (.NET) application using Visual Studio 2022, facilitating seamless management of
-            vehicle sales operations. This system provides dual-access levels (staff and admin) for efficient appointment
-            scheduling, customer and employee recordkeeping, inventory management, vehicle details tracking, and automated
-            employee salary calculations. This project highlights my C# programming skills, database proficiency, and
-            adeptness in designing and implementing user-access-controlled applications tailored for the automotive sales
-            industry.<br><br>
-            <b class="bolded2">C# | (.NET) | Visual Studio |SQL Server Management Studio</b></p>
-        </li>
-  
-        <li><p><b class="bolded">City Bank v.1.0.0</b><br>
-          Developed a comprehensive Java application to streamline banking
-          operations and enhance customer service. This system allows
-          banking staff to create customer accounts, issue cheque books,
-          manage employee operations, and calculate interest rates for
-          customer deposits. It leverages object-oriented programming
-          principles and database integration to efficiently handle a wide
-          range of financial transactions and customer interactions. This
-          project demonstrates skills in Java programming, data
-          management, and financial operations, highlighting my ability to
-          develop practical and efficient solutions for the financial industry.<br><br>
-          <b class="bolded2">Java |</b></p></li>
-      </ul>
-      <hr>
-    </div>
-  
-    <div class="section04">
-      <h1 class="subheadings">REFERENCES</h1>
-      <div class="section04-2">
-        <div class="section04-2-1">
-          <p class="ref">Rev. Fr. Araliya Jayasundara,<br>
-            Principal,<br>
-            Trinity College,<br>
-            Kandy.<br>
-            +94772515672</p>
+    <nav id="hamburger-nav">
+      <div class="logo">Ravindu Haputhanthri</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    
-        <div class="section04-2-1">
-          <p class="ref">Mrs. Iresha Edirisinghe<br>
-            Assistant Manager,<br>
-            Peoples Bank,<br>
-            Katubedda Branch. <br>
-            +94773527830</p>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
-      <hr>
-    </div>
-  </div>
+    </nav>
 
-  <div class="section05">
-    <p class="footer">&copy; 2024 iCET Student Profile</p>
-  </div>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          class="profilepic"
+          src="./assets/01.jpg"
+          alt="Ravindu Haputhanthri profile picture"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ravindu Haputhanthri</h1>
+        <p class="section__text__p2">Fullstack Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/cv.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/ravinduheshan99'"
+          />
+        </div>
+      </div>
+    </section>
 
-</body>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/02.jpg" alt="Profile picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>No Industry Experience <br />Fullstack Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>BSc. Bachelors Degree<br />Computer Science (Hons)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p class="abouttxt">
+              Dedicated and self - driven individual who is motivated by
+              understanding deficiencies in own skills. Is passionate in
+              academic work and has come up with many instances that reveal the
+              ability in team work and true skills in problem solving. Would
+              love to work with team members while leading or supporting them to
+              deliver successful outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
 
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Fullstack Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SpringBoot</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Fullstack Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C#</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Auto Mart</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ravinduheshan99/Auto-Mart.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ravinduheshan99/Auto-Mart.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Defence System</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ravinduheshan99/Defence-System.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ravinduheshan99/Defence-System.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Burger Shop</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ravinduheshan99/Burger-Shop.git'"
+              >
+                Console
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/ravinduheshan99/Burger-Shop-GUI-Java-Swing.git'"
+              >
+                GUI
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ravinduheshan99@gmail.com">ravinduheshan99@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Ravindu Haputhanthri. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
