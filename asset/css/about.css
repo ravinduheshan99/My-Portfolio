@@ -78,6 +78,7 @@
     transform: translateY(-60px);
     /* margin: 2rem; */
 }
+/*
 .section-title-02:before{
     content: '';
     position: absolute;
@@ -87,6 +88,7 @@
     bottom: 0;
     background: gray;
 }
+*/
 .container{
     position: relative;
     flex-direction: column;
