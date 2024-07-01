@@ -1,391 +1,994 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/navbar.css">
+    <link rel="stylesheet" href="./asset/css/buttons.css">
+    <link rel="stylesheet" href="./asset/css/about.css">
+    <link rel="stylesheet" href="./asset/css/skills.css">
+    <link rel="stylesheet" href="./asset/css/project.css">
+    <link rel="stylesheet" href="./asset/css/contact.css">
+    <link rel="stylesheet" href="./asset/css/footer.css">
+    <link rel="stylesheet" href="./asset/css/particles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <!-- Scroll animation -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+
     <title>Ravindu Haputhanthri</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
 
-    <nav id="desktop-nav">
-      <div class="logo">Ravindu Haputhanthri</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+</head>
+<body>
+        <!-- NAVIGATON BAR DESIGN  -->
+        <header>
+            <div class="nav-bar">
+                <div class="navigation">
+                    <div class="nav-items">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#project">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <!-- <button>Mode Button</button> -->
+            </div>
+        </header>
 
-    <nav id="hamburger-nav">
-      <div class="logo">Ravindu Haputhanthri</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+        <!-- HERO SECTION DESIGN -->
+        <section class="home" id="home">
+            <div id="particles-js"></div>
+            <div class="left-side">
+                <div class="home-content" id="id-home-content">
+                    <h3 class="home-content-h3">Hey It's Me</h3>
+                    <h1 class="stroke-text-white home-content-h1">Ravindu Haputhanthri</h1>
+                    <h3 class="home-content-h3-2">And I'm a <span class="multiple-text"></span></h3>
+                    <p class="home-content-p"></p>
+                </div>
+                <!-- HERO BUTTON -->
+                <div class="hero-btn">
+                    <a href="./asset/documents/Ravindu Haputhanthri .pdf" download target="_blank" style="text-decoration: none;">
+                      <div class="glow-on-hover btn-home">
+                          <div class="button">
+                              <p class="btnText">DOWNLOAD CV</p>
+                              <div class="btnTwo">
+                                <p class="btnText2"><i class="fa-regular fa-circle-down"></i></p>
+                              </div>
+                          </div>
+                      </div>
+                    </a>
+                      <a href="#contact" style="text-decoration: none;">
+                      <div class="glow-on-hover btn-home">
+                          <div class="button">
+                              <p class="btnText">CONTACT ME</p>
+                              <div class="btnTwo">
+                                <p class="btnText2-icon"><i class="fa-solid fa-phone"></i></p>
+                              </div>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="midle">
+                <img src="./asset/images/profile-1.png" alt="" class="home-img">
+            </div>
+            <div class="right-side socila-media">
+                <a href="mailto:ravinduheshan99@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ravinduheshan99" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </section>
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          class="profilepic"
-          src="./assets/01.jpg"
-          alt="Ravindu Haputhanthri profile picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Ravindu Haputhanthri</h1>
-        <p class="section__text__p2">Fullstack Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/cv.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/ravinduheshan99'"
-          />
-        </div>
-      </div>
-    </section>
+        <!-- ABOUT SECTION DESIGN -->
+        <section class="about section" id="about">
+            <div class="container flex-center">
+                <h1 class="section-title-01">About Me</h1>
+                <h2 class="section-title-02 stroke-text-white">About Me</h2>
+                <div class="content flex-center">
+                    <div class="about-img">
+                        <img src="./asset/images/about-img.png" alt="">
+                    </div>
+                    <div class="about-info">
+                        <div class="about-description">
+                            <h3>I'm Ravindu Haputhanthri</h3>
+                            <h4>A Fullstack Developer in Sri Lanka</h4>
+                            <p><br>I am a highly motivated and ambitious final-year undergraduate student at the University of Kelaniya, Sri Lanka, pursuing an Honours Degree in Computer Science. With a strong foundation in computer science and a keen interest in software engineering, I am passionate about the intersection of technology, data, and innovation. I thrive on leveraging data-driven insights to solve real-world problems and am committed to continuous learning and professional growth. My collaborative nature and problem-solving skills have been honed through various academic projects and leadership roles, and I am eager to contribute to innovative projects and work alongside like-minded professionals.</p>
+                        </div>
+                        <!--<ul class="profetional-list">
+                            <li class="list-item">
+                                <h4>Fullstack</h4>
+                                <span>Front-end<br>Back-end</span>
+                            </li>
+                            <li class="list-item">
+                                <h4>Web</h4>
+                                <span>Wordpress<br>Hosting</span>
+                            </li>
+                            <li class="list-item">
+                                <h4>Mobile</h4>
+                                <span>Android<br>Application</span>
+                            </li>
+                        </ul>
+                        <div class="hero-btn">
+                            <a href="./asset/documents/Ravindu Haputhanthri .pdf" download target="_blank" style="text-decoration: none;">
+                                <div class="glow-on-hover btn-about">
+                                    <div class="button">
+                                        <p class="btnText">DOWNLOAD CV</p>
+                                        <div class="btnTwo">
+                                          <p class="btnText2"><i class="fa-regular fa-circle-down"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </a>
+                            <a href="#contact" style="text-decoration: none;">
+                                <div class="glow-on-hover btn-about">
+                                    <div class="button">
+                                        <p class="btnText">CONTACT ME</p>
+                                        <div class="btnTwo">
+                                          <p class="btnText2-icon"><i class="fa-solid fa-phone"></i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </a>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./assets/02.jpg" alt="Profile picture" class="about-pic" />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>No Industry Experience <br />Fullstack Development</p>
+        <!-- SKILLS SECTION DESIGN -->
+        <section class="skills section" id="skills">
+            <div class="container flex-center">
+                <h1 class="section-title-01">My Skills</h1>
+                <h2 class="section-title-02 stroke-text-white">My Skills</h2>
+                <div class="content flex-center">
+                    
+                    <div class="timeline">
+                        <!-- ***************************** -->
+                        <div class="skill-container  left-container">
+                            <div class="bullet"></div>
+                            <div class="text-box">
+                                <h3>Programming Languages</h3>
+                                <h5>Languages</h5>
+                                <ul class="items">
+                                    <li><img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt=""></li>
+                                </ul>
+                                <span class="left-container-arrow left-container-arrow-mobile"></span>
+                            </div>
+                        </div>
+                        <!-- **************************** -->
+                        <!-- ***************************** -->
+                        <div class="skill-container right-container">
+                            <div class="bullet"></div>
+                            <div class="text-box">
+                                <h3>Web Technology</h3>
+                                <h5>Languages</h5>
+                                <ul class="items">
+                                    <li><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt=""></li>
+                                    <!-- <li><img src="" alt=""></li> -->
+                                </ul>
+                                <span class="right-container-arrow"></span>
+                            </div>
+                        </div>
+                        <!-- **************************** -->
+                        <!-- ***************************** -->
+                        <div class="skill-container left-container">
+                            <div class="bullet"></div>
+                            <div class="text-box">
+                                <h3>Frame Work & Libraries</h3>
+                                <!-- <h5>2024 - 2024</h5> -->
+                                <ul class="items">
+                                    <li><img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt=""></li>
+                                </ul>
+                                <span class="left-container-arrow left-container-arrow-mobile"></span>
+                            </div>
+                        </div>
+                        <!-- **************************** -->
+                        <!-- ***************************** -->
+                        <div class="skill-container right-container">
+                            <div class="bullet"></div>
+                            <div class="text-box">
+                                <h3>Database Technology</h3>
+                                <!-- <h5>2024 - 2024</h5> -->
+                                <ul class="items">
+                                    <li><img src="https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                    <li><img src="" alt=""></li>
+                                </ul>
+                                <span class="right-container-arrow"></span>
+                            </div>
+                        </div>
+                        <!-- **************************** -->
+                        <!-- ***************************** -->
+                        <div class="skill-container left-container">
+                            <div class="bullet"></div>
+                            <div class="text-box">
+                                <h3>Documentation & Others</h3>
+                                <h5>2024 - 2024</h5>
+                                <ul class="items">
+                                    <li><img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" alt=""></li>
+                                    <!-- <li><img src="" alt=""></li> -->
+                                </ul>
+                                <span class="left-container-arrow left-container-arrow-mobile"></span>
+                            </div>
+                        </div>
+                        <!-- **************************** -->
+                        <!-- ***************************** -->
+                        <div class="skill-container right-container">
+                            <div class="bullet"></div>
+                            <div class="text-box">
+                                <h3>Softwares</h3>
+                                <h5>Using for planning and development</h5>
+                                <ul class="items">
+                                    <li><img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/Geany-6DC68C?style=for-the-badge&logo=geany&logoColor=white" alt=""></li>
+                                    <li><img src="https://img.shields.io/badge/Minitab-0082C8?style=for-the-badge&logo=minitab&logoColor=white" alt=""></li>
+                                </ul>
+                                <span class="right-container-arrow"></span>
+                            </div>
+                        </div>
+                        <!-- **************************** -->
+                    </div>
+                </div>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>BSc. Bachelors Degree<br />Computer Science (Hons)</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p class="abouttxt">
-              Dedicated and self - driven individual who is motivated by
-              understanding deficiencies in own skills. Is passionate in
-              academic work and has come up with many instances that reveal the
-              ability in team work and true skills in problem solving. Would
-              love to work with team members while leading or supporting them to
-              deliver successful outcomes.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+        </section>
 
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Fullstack Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SpringBoot</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+        <!-- PROJECTS SECTION DESIGN -->
+        <section class="project section" id="project">
+            <div class="container flex-center">
+                <h1 class="section-title-01">My Project</h1>
+                <h2 class="section-title-02 stroke-text-white">My Project</h2>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Fullstack Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C#</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
 
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Burger Shop</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ravinduheshan99/Burger-Shop.git'"
-              >
-                Console
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ravinduheshan99/Burger-Shop-GUI-Java-Swing.git'"
-              >
-                GUI
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Auto Mart</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ravinduheshan99/Auto-Mart.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ravinduheshan99/Auto-Mart.git'"
-              >
-                Code
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Defence System</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ravinduheshan99/Defence-System.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/ravinduheshan99/Defence-System.git'"
-              >
-                Code
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
+            <div class="project">
+                <!-- card 01 -->
+                <div class="card" id="card">
+                  <div class="card-content">
+                    <img src="./asset/images/Clothify Store/Logo.jpg" alt="">
+                    <h3>Fullstack Project</h3>
+                    <p>POS System For Clothing Store.</p>
+                    <button class="open-popup-btn main-card-btn">Project Details</button>
+                    <!-- ************** -->
+                    <!-- <div class="button open-popup-btn" id="main-card-btn">
+                        <p class="btnText" id="prj-btnText">Learn More</p>
+                        <div class="btnTwo">
+                          <p class="btnText2" id="prj-btnTwo">Click</i></p>
+                        </div>
+                    </div> -->
+                    <!-- ************** -->
+                  </div>
+                </div>
+                
+                <div class="popup" id="popup1">
+                  <div class="popup-content">
+                    <span class="close-popup-btn" id="close-icon"><i class="fa-solid fa-xmark close-icon" id="close-icon" style="color: rgb(0, 0, 0);"></i></span>
+                    <!-- ********************** -->
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./asset/images/Clothify Store/Logo.jpg" class="d-block w-100" alt="./asset/images/Clothify Store/Logo.jpg">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/1.png" class="d-block w-100" alt="./asset/images/Clothify Store/1.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/2.png" class="d-block w-100" alt="./asset/images/Clothify Store/2.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/3.png" class="d-block w-100" alt="./asset/images/Clothify Store/3.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/4.png" class="d-block w-100" alt="./asset/images/Clothify Store/4.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/5.png" class="d-block w-100" alt="./asset/images/Clothify Store/5.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/6.png" class="d-block w-100" alt="./asset/images/Clothify Store/6.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/7.png" class="d-block w-100" alt="./asset/images/Clothify Store/7.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Clothify Store/8.png" class="d-block w-100" alt="./asset/images/Clothify Store/8.png">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- ******************************* -->
+                    <h3>Clothify Store</h3>
+                    <textarea id="scrollingText" rows="5" cols="80">This is a standalone application developed as part of the final project for the JavaFX module. The application is a POS (Point of Sale) system designed to manage a clothing store's operations efficiently. It leverages JavaFX with Jfoenix, Hibernate, MySQL, Maven, Singleton and Factory Design Patterns Combining with Layered Architecture to create a robust, scalable, and user-friendly system.</textarea>
+                    <div class="hero-btn flex-center btn-project mt-3">
+                        <a href="https://github.com/ravinduheshan99/Clothify-Store-POS.git" target="_blank" style="text-decoration: none;">
+                            <div class="glow-on-hover">
+                                <div class="button">
+                                    <p class="btnText">Code</p>
+                                    <div class="btnTwo">
+                                        <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <a href="https://github.com/ravinduheshan99/Clothify-Store-POS/tree/main/assets" target="_blank" style="text-decoration: none;">
+                        <div class="glow-on-hover">
+                            <div class="button">
+                                <p class="btnText">Documents</p>
+                                <div class="btnTwo">
+                                    <p class="btnText2"><i class="fa-solid fa-book"></i></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="overlay" id="overlay"></div>
+                <!-- ************************ -->
+                <!-- card 02 -->
+                <div class="card" id="card">
+                    <div class="card-content">
+                      <img src="./asset/images/Defence System/01.png" alt="">
+                      <h3>Java Project</h3>
+                      <p>Defense Communication System</p>
+                      <button class="open-popup-btn main-card-btn">Project Details</button>
+                    </div>
+                  </div>
+                  
+                  <div class="popup" id="popup2">
+                    <div class="popup-content">
+                      <span class="close-popup-btn"><i class="fa-solid fa-xmark close-icon"></i></span>
+                      <!-- <img src="./asset/images/profile-2.jpg" alt=""> -->
+                      <!-- ********************** -->
+                      <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./asset/images/Defence System/01.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Defence System/02.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Defence System/03.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Defence System/04.png" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- ******************************* -->
+                      <h3>Defense Communication System</h3>
+                      <textarea id="scrollingText" rows="5" cols="80">The Defense Communication System is a Java-based application developed in NetBeans IDE and designed to facilitate efficient communication between various military units such as helicopters, tanks, and submarines. This system allows these units to share information in real-time with a main control room, ensuring coordinated and effective operations during warfare. The project utilizes Object-Oriented Programming (OOP) concepts, abstraction, polymorphism, and several design patterns including Observer-Observable, and Singleton and MVC Architecture.</textarea>
+                      <div class="hero-btn flex-center btn-project mt-3">
+                        <a href="https://github.com/ravinduheshan99/Defense-System.git" target="_blank" style="text-decoration: none;">
+                            <div class="glow-on-hover">
+                                <div class="button">
+                                    <p class="btnText">Code</p>
+                                    <div class="btnTwo">
+                                        <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <a href="https://github.com/ravinduheshan99/Defense-System/tree/main/assets" target="_blank" style="text-decoration: none;">
+                        <div class="glow-on-hover">
+                            <div class="button">
+                                <p class="btnText">Documents</p>
+                                <div class="btnTwo">
+                                    <p class="btnText2"><i class="fa-solid fa-book"></i></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="overlay" id="overlay"></div>
+                  <!-- ************************ -->
+                   <!-- card 03 -->
+                   <div class="card" id="card">
+                    <div class="card-content">
+                      <img src="./asset/images/Portfolio/1.png" alt="">
+                      <h3>Portfolio Website</h3>
+                      <p>Responsive Portfolio Website.</p>
+                      <button class="open-popup-btn main-card-btn">Project Details</button>
+                    </div>
+                  </div>
+                  
+                  <div class="popup" id="popup3">
+                    <div class="popup-content">
+                      <span class="close-popup-btn"><i class="fa-solid fa-xmark close-icon"></i></span>
+                      <!--<img src="./asset/images/Portfolio/1.png" alt="">-->
+                      <!-- ********************** -->
+                      <div id="carouselExample03" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./asset/images/Portfolio/1.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Portfolio/2.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Portfolio/3.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Portfolio/4.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Portfolio/5.png" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample03" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample03" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- ******************************* -->
+                      <h3>Animated & Responsive Portfolio Website.</h3>Animated & Responsive Portfolio Website. Using html, css, javascript, boostrap, and javascript libraris.</textarea>
+                      <div class="hero-btn flex-center btn-project mt-3">
+                        <a href="https://github.com/ravinduheshan99/My-Portfolio.git" target="_blank" style="text-decoration: none;">
+                            <div class="glow-on-hover">
+                                <div class="button">
+                                    <p class="btnText">Code</p>
+                                    <div class="btnTwo">
+                                        <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <a href="https://ravinduheshan99.github.io/My-Portfolio/" target="_blank" style="text-decoration: none;">
+                        <div class="glow-on-hover">
+                            <div class="button">
+                                <p class="btnText">Launch</p>
+                                <div class="btnTwo">
+                                    <p class="btnText2"><i class="fa-solid fa-rocket"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="overlay" id="overlay"></div>
+                  <!-- ************************ -->
+                  <!-- card 04 -->
+                <div class="card" id="card">
+                    <div class="card-content">
+                      <img src="./asset/images/Burger Shop Java Swing/2.png" alt="">
+                      <h3>Java Project</h3>
+                      <p>Burger Shop Management System</p>
+                      <button class="open-popup-btn main-card-btn">Project Details</button>
+                    </div>
+                  </div>
+                  
+                  <div class="popup" id="popup4">
+                    <div class="popup-content">
+                      <span class="close-popup-btn"><i class="fa-solid fa-xmark close-icon"></i></span>
+                      <!-- <img src="./asset/images/profile-2.jpg" alt=""> -->
+                      <!-- ********************** -->
+                      <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./asset/images/Burger Shop Java Swing/2.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/2.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/01.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/01.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/02.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/02.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/03.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/03.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/04.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/04.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/05.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/05.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/06.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/06.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/07.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/07.png">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./asset/images/Burger Shop Java Swing/08.png" class="d-block w-100" alt="./asset/images/Burger Shop Java Swing/08.png">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <!-- ******************************* -->
+                      <h3>Burger Shop Management System                      </h3>
+                      <textarea id="scrollingText" rows="5" cols="80">This is a Point of Sale (POS) system developed for a burger shop using Java Swing and following the Model-View-Controller (MVC) architecture. The system allows users to perform various tasks such as placing orders, searching for customers and orders, viewing orders, updating order details, and identifying the best customer.</textarea>
+                      <div class="hero-btn flex-center btn-project">
+                        <a href="https://github.com/ravinduheshan99/Burger-Shop-GUI-Java-Swing.git" target="_blank" style="text-decoration: none;">
+                            <div class="glow-on-hover">
+                                <div class="button">
+                                    <p class="btnText">Code</p>
+                                    <div class="btnTwo">
+                                        <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <a href="https://github.com/ravinduheshan99/Burger-Shop-GUI-Java-Swing/tree/main/Images" target="_blank" style="text-decoration: none;">
+                        <div class="glow-on-hover">
+                            <div class="button">
+                                <p class="btnText">Documents</p>
+                                <div class="btnTwo">
+                                    <p class="btnText2"><i class="fa-solid fa-book"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="overlay" id="overlay"></div>
+                  <!-- ************************ -->
+                  <!-- card 05 -->
+                <div class="card" id="card">
+                    <div class="card-content">
+                      <img src="./asset/images/Student Registration System/1.png" alt="">
+                      <h3>Fullstack Project</h3>
+                      <p>Student Registration System</p>
+                      <button class="open-popup-btn main-card-btn">Project Details</button>
+                    </div>
+                  </div>
+                  
+                  <div class="popup" id="popup5">
+                    <div class="popup-content">
+                      <span class="close-popup-btn"><i class="fa-solid fa-xmark close-icon"></i></span>
+                      <!-- <img src="./asset/images/profile-2.jpg" alt=""> -->
+                      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./asset/images/Student Registration System/1.png" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <h3>Student Registration System</h3>
+                      <textarea id="scrollingText" rows="5" cols="80">This project is a web-based student registration system. It is designed to demonstrate a full-stack application using HTML, CSS, Bootstrap, and JavaScript for the frontend, and a Java Spring framework for the backend. The application allows users to enroll, update, search, and delete student records.</textarea>
+                      <div class="hero-btn flex-center btn-project">
+                        <a href="https://github.com/ravinduheshan99/Student-Registration-Front-End.git" target="_blank" style="text-decoration: none;">
+                            <div class="glow-on-hover">
+                                <div class="button">
+                                    <p class="btnText">Frontend</p>
+                                    <div class="btnTwo">
+                                        <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <a href="https://github.com/ravinduheshan99/Student-Registration-Back-End.git" target="_blank" style="text-decoration: none;">
+                        <div class="glow-on-hover">
+                            <div class="button">
+                                <p class="btnText">Backend</p>
+                                <div class="btnTwo">
+                                    <p class="btnText2"><i class="fa-brands fa-github"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="overlay" id="overlay"></div>
+                  <!-- ************************ -->
+                 
+                  <!-- card 06 -->
+                <div class="card" id="card">
+                    <div class="card-content">
+                      <img src="./asset/images/Weather Application/1.gif" alt="">
+                      <h3>Website</h3>
+                      <p>Live Weather Application</p>
+                      <button class="open-popup-btn main-card-btn">Project Details</button>
+                    </div>
+                  </div>
+                  
+                  <div class="popup" id="popup6">
+                    <div class="popup-content">
+                      <span class="close-popup-btn"><i class="fa-solid fa-xmark close-icon"></i></span>
+                      <img src="./asset/images/Weather Application/1.gif" alt="">
+                      <h3>Live Weather Application</h3>
+                      <textarea id="scrollingText" rows="5" cols="80">This is a Live Weather Application! This project is a simple and intuitive web application developed using plain HTML, CSS, and JavaScript. It allows users to get real-time weather information for any location they enter.</textarea>
+                      <div class="hero-btn flex-center btn-project">
+                        <a href="https://github.com/ravinduheshan99/Weather-Application.git" target="_blank" style="text-decoration: none;">
+                            <div class="glow-on-hover">
+                                <div class="button">
+                                    <p class="btnText">Code</p>
+                                    <div class="btnTwo">
+                                        <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <a href="https://ravinduheshan99.github.io/Weather-Application/" target="_blank" style="text-decoration: none;">
+                        <div class="glow-on-hover">
+                            <div class="button">
+                                <p class="btnText">Launch</p>
+                                <div class="btnTwo">
+                                    <p class="btnText2"><i class="fa-solid fa-rocket"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="overlay" id="overlay"></div>
+                  <!-- ************************ -->
+                <!-- card 07 -->
+                <div class="card" id="card">
+                  <div class="card-content">
+                    <img src="./asset/images/Sinhala Character Recognition System/Logo.webp" alt="">
+                    <h3>Deep Learning</h3>
+                    <p>Sinhala Character Recognition with CNN</p>
+                    <button class="open-popup-btn main-card-btn">Project Details</button>
+                  </div>
+                </div>
+                
+                <div class="popup" id="popup7">
+                  <div class="popup-content">
+                    <span class="close-popup-btn"><i class="fa-solid fa-xmark close-icon"></i></span>
+                    <!-- <img src="./asset/images/profile-2.jpg" alt=""> -->
+                    <!-- ********************** -->
+                    <div id="carouselExample07" class="carousel slide">
+                      <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="./asset/images/Sinhala Character Recognition System/01.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./asset/images/Sinhala Character Recognition System/02.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./asset/images/Sinhala Character Recognition System/03.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./asset/images/Sinhala Character Recognition System/04.png" class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample07" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample07" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <!-- ******************************* -->
+                    <h3>Sinhala Character Recognition with CNN</h3>
+                    <textarea id="scrollingText" rows="5" cols="80">This project aims to develop a machine learning model capable of recognizing handwritten Sinhala characters. Using a CNN, the model has been trained to identify two specific characters, "Ra" and "Ya". The project demonstrates the use of data augmentation, model training, and evaluation using TensorFlow and Keras within a Google Colab Notebook.</textarea>
+                    <div class="hero-btn flex-center btn-project mt-3">
+                      <a href="https://github.com/ravinduheshan99/Deep-Learning-Mini-Project-01-Sinhala-Character-Recognition-System.git" target="_blank" style="text-decoration: none;">
+                          <div class="glow-on-hover">
+                              <div class="button">
+                                  <p class="btnText">Code</p>
+                                  <div class="btnTwo">
+                                      <p class="btnText2"><i class="fa-brands fa-github"></i></i></p>
+                                  </div>
+                              </div>
+                          </div>
+                          </a>
+                      <a href="https://github.com/ravinduheshan99/Deep-Learning-Mini-Project-01-Sinhala-Character-Recognition-System/tree/main/assets/img" target="_blank" style="text-decoration: none;">
+                      <div class="glow-on-hover">
+                          <div class="button">
+                              <p class="btnText">Documents</p>
+                              <div class="btnTwo">
+                                  <p class="btnText2"><i class="fa-solid fa-book"></i></i></p>
+                              </div>
+                          </div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="overlay" id="overlay"></div>
+              </div>    
+        </section>
 
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:ravinduheshan99@gmail.com">ravinduheshan99@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
+        <!-- CONTACT SECTION DESIGN -->
+        <section class="contact section" id="contact">
+            <div class="container flex-center">
+                <h1 class="section-title-01">Contact Me</h1>
+                <h2 class="section-title-02 stroke-text-white">Contact Me</h2>
+                <div class="content flex-center">
+                    <div class="contact-left">
+                        <h3>Discuss Your Ideas with Me</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <h3 class="item-title"><i class="fas fa-phone"></i> Phone</h3>
+                                <span class="item">+94 77 516 5666</span>
+                            </li>
+                            <li>
+                                <h3 class="item-title"><i class="fas fa-envelope"></i> Email Address</h3>
+                                <span class="item"><a href="mailto:ravinduheshan99@gmail.com">ravinduheshan99@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <h3 class="item-title"><i class="fas fa-map-marker-alt"></i> Address</h3>
+                                <span class="item">No 52/3,</span><br>
+                                <span class="item">Veera Puran Appu Mawatha,</span><br>
+                                <span class="item">Lakshapathiya,</span><br>
+                                <span class="item">Moratuwa,</span><br>
+                                <span class="item">Western Province,</span><br>
+                                <span class="item">Sri Lanka.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-right">
+                        <p>I'm always open to discussing your product ideas.<br/>
+                          <span>Design Work or Potential Partnerships.</span>
+                        </p>
+                        <form action="#">
+                            <div class="form-row">
+                               <div class="input-data">
+                                  <input type="text" required class="input-box" id="txt-first-name" style="color: #fff;">
+                                  <label for="">First Name</label>
+                               </div>
+                               <div class="input-data">
+                                  <input type="text" required class="input-box" id="txt-last-name" style="color: #fff;">
+                                  <label for="">Last Name</label>
+                               </div>
+                            </div>
+                            <div class="form-row">
+                               <div class="input-data">
+                                  <input type="email" required class="input-box" id="txt-email" style="color: #fff;">
+                                  <label for="">Email</label>
+                               </div>
+                            </div>
+                            <div class="form-row">
+                             <div class="input-data">
+                                <input type="text" required class="input-box" id="txt-subject" style="color: #fff;">
+                                <label for="">Subject</label>
+                             </div>
+                          </div>
+                            <div class="form-row">
+                               <div class="input-data textarea">
+                                  <textarea rows="8" cols="80" required id="contact-scrollingText" class="input-box" id="txt-message" style="color: #fff;"></textarea>
+                                  <br />
+                                  <label for="">Write your message</label>
+                                  <br />
+                                  <div class="btn-contact">
+                                    <div class="form-row submit-btn">
+                                        <div class="input-data">
+                                           <div class="inner"></div>
+                                           <input type="submit" value="Submit">
+                                        </div>
+                                     </div>
+                                     <div class="form-row reset-btn">
+                                       <div class="input-data">
+                                          <div class="inner"></div>
+                                          <input type="reset" value="Reset">
+                                       </div>
+                                    </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <!-- FOOTER SECTION DESIGN -->
+        <footer>
+            <div class="footer-col">
+                <h5>Projects</h5>
+                <ul class="footer-ul">
+                    <li><a href="#">Fullstack</a></li>
+                    <li><a href="#">Front-end</a></li>
+                    <li><a href="#">Back-end</a></li>
+                    <li><a href="#">Web</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Favourite</h5>
+                <ul class="footer-ul">
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Spring Boot</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Angular</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Sections</h5>
+                <ul class="footer-ul">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Follow Me</h5>
+                <div class="footer-socialMedia">
+                    <a href="mailto:ravinduheshan99@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/ravinduheshan99" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <!-- <a href="https://www.instagram.com/harshana_eshan/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a> -->
+                </div>
+            </div>
+        </footer>
+        <div class="end-bar">
+            <h7>Developed & Design by Ravindu Haputhanthri/h6>
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 Ravindu Haputhanthri. All Rights Reserved.</p>
-    </footer>
+        
 
-    <script src="script.js"></script>
-  </body>
+    <script src="./asset/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- TYPED JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- PARTICLES JS -->
+    <script src="./asset/js/particles.js"></script>
+    <script src="./asset/js/app.js"></script>
+
+    <!-- Scroll animation -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+      ScrollReveal({ 
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 200
+      });
+      
+
+      // Home
+      ScrollReveal().reveal('.home-img')
+      ScrollReveal().reveal('.home-content-h3', { delay: 400, origin: 'left' })
+      ScrollReveal().reveal('.home-content-h1', { delay: 500, origin: 'left' })
+      ScrollReveal().reveal('.home-content-h3-2', { delay: 600, origin: 'left'})
+      ScrollReveal().reveal('.home-content-p', { delay: 700, origin: 'left'})
+      ScrollReveal().reveal('.btn-home', {interval: 100})
+      ScrollReveal().reveal('.right-side a', {interval: 100, origin: 'right'})
+
+      // About
+      ScrollReveal().reveal('.section-title-01', { delay: 400})
+      ScrollReveal().reveal('.section-title-02', { delay: 500})
+      ScrollReveal().reveal('.about-img', { delay: 400, origin: 'left' })
+      ScrollReveal().reveal('.about-description h3', { delay: 400, origin: 'right' })
+      ScrollReveal().reveal('.about-description h4', { delay: 500, origin: 'right' })
+      ScrollReveal().reveal('.about-description p', { delay: 600, origin: 'right' })
+      ScrollReveal().reveal('.profetional-list .list-item h4', { delay: 700, origin: 'bottom' })
+      ScrollReveal().reveal('.profetional-list .list-item span', { delay: 800, origin: 'bottom' })
+      ScrollReveal().reveal('.btn-about', {interval: 100})
+
+      // Skills
+      ScrollReveal().reveal('.timeline', { delay: 400})
+
+      // Project
+      ScrollReveal().reveal('.card', {interval: 100})
+
+      // Contact
+      ScrollReveal().reveal('.contact-left h3', { delay: 400, origin: 'left' })
+      ScrollReveal().reveal('.item-title', { delay: 400, origin: 'left' })
+      ScrollReveal().reveal('.item', { delay: 700})
+      ScrollReveal().reveal('.contact-right p', { delay: 400, origin: 'right' })
+      ScrollReveal().reveal('.contact-right form', { delay: 500, origin: 'right' })
+      
+      // Footer
+      ScrollReveal().reveal('.footer-col', {interval: 100})
+
+
+
+    </script>
+
+</body>
 </html>

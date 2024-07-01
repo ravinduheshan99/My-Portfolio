@@ -1,0 +1,120 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px 5%;
+}
+
+.footer-ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col h5{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+
+.footer-col h5::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
+}
+
+.footer-ul li:not(:last-child){
+    margin-bottom: 2px;
+}
+
+.footer-ul li a{
+    display: block;
+    font-size: 17px;
+    text-transform: capitalize;
+    color: #517fa4;
+    text-decoration: none;
+    transition: 0.4s;
+    margin-left: -1.5rem;
+}
+
+.footer-ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+.footer-socialMedia a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+    background: transparent;
+    border: 0.1rem solid var(--main-color);
+    color: var(--main-color);
+    transition: .5s ease;
+    background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-socialMedia a:hover{
+    color: #4d4f55;
+    box-shadow: 0 0 1rem var(--main-color);
+    background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.end-bar{
+    width: 100%;
+    background: #517fa4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.end-bar h7{
+    width: 100%;
+    /* background: #27c0ac; */
+    color: black;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+}
