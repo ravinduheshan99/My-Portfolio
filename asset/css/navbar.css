@@ -1,90 +1,88 @@
-:root{
-    --first-color: #0e2431;
-    --second-color: #6a59d1;
-    --third-color: #777;
+:root {
+  --first-color: #0e2431;
+  --second-color: #6a59d1;
+  --third-color: #777;
 
-    --hover-color: #614fd0;
+  --hover-color: #614fd0;
 
-    --body-bg-color: #fefefe;
-    --card-bg-color: #fff;
-    --popup-bg-color: #fff;
+  --body-bg-color: #fefefe;
+  --card-bg-color: #fff;
+  --popup-bg-color: #fff;
 
-    --bg-transparent-color: rgba(0, 0, 0, 0.1);
-    --transparent-color-01: rgba(0, 0, 0, 0.1);
-    --transparent-color-01: rgba(106, 89, 209, 0.1);
-    --line-color: #d7d7d7;
+  --bg-transparent-color: rgba(0, 0, 0, 0.1);
+  --transparent-color-01: rgba(0, 0, 0, 0.1);
+  --transparent-color-01: rgba(106, 89, 209, 0.1);
+  --line-color: #d7d7d7;
 
-    --color-filter: invert(1);
+  --color-filter: invert(1);
 
-    --box-shadow: 0px 0px 20px rgba(0 0 0 / 10%);
+  --box-shadow: 0px 0px 20px rgba(0 0 0 / 10%);
 
-    --small-font-size: 0.9em;
-    --normal-font-size: 1em;
+  --small-font-size: 0.9em;
+  --normal-font-size: 1em;
 
-    --scroll-bar-color: #c5cadf;
-    --scroll-thumb-color: #70768a;
-    --scroll-thumb-hover-color: #454f6b;
+  --scroll-bar-color: #c5cadf;
+  --scroll-thumb-color: #70768a;
+  --scroll-thumb-hover-color: #454f6b;
 
-    --bg-color: #191f36;
-    --snd-bf-color: #262B40;
-    --text-color: #fff;
-    --main-color: #59b1f4;
+  --bg-color: #191f36;
+  --snd-bf-color: #262b40;
+  --text-color: #fff;
+  --main-color: #59b1f4;
 
-    --txt-color: #c2c2c2;
+  --txt-color: #c2c2c2;
 }
 
-header{
-    z-index: 99999;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(20px);
-    transition: .6s ease;
-    height: 3.5rem;
+header {
+  z-index: 99999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(20px);
+  transition: 0.6s ease;
+  height: 3.5rem;
 }
 
-.nav-bar{
-    position: relative;
-    height: calc(4rem +1rem);
-    max-width: 1250px;
-    display: flex;
-    justify-content: space-around;   /* ********** */
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
-    transition: .6s ease;
-    margin-top: 1rem;
+.nav-bar {
+  position: relative;
+  height: calc(4rem +1rem);
+  max-width: 1250px;
+  display: flex;
+  justify-content: space-around; /* ********** */
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  transition: 0.6s ease;
+  margin-top: 1rem;
 }
 
-.nav-bar .logo{
-    /* background: -webkit-linear-gradient(#2cff92, #1080cf); */
-    background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.3em;
-    font-weight: 600;
-}
-.nav-items a{
-    /* background: -webkit-linear-gradient(#2cff92, #1080cf); */
-    background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
+.nav-bar .logo {
+  background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-    font-size: var(--normal-font-size);
-    font-weight: 500;
+  font-size: 1.3em;
+  font-weight: 600;
 }
-.nav-items a:not(:last-child){
-    margin-right: 40px;
+.nav-items a {
+  background: -webkit-linear-gradient(#53ff2c, #1ca3bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+.nav-items a:not(:last-child) {
+  margin-right: 40px;
 }
 
-.nav-items a:hover{
-    background: -webkit-linear-gradient(#2cff92, #1080cf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.nav-items a:hover {
+  background: -webkit-linear-gradient(#2cff92, #1080cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.nav-bar .logo:hover{
-    background: -webkit-linear-gradient(#2cff92, #1080cf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.nav-bar .logo:hover {
+  background: -webkit-linear-gradient(#2cff92, #1080cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
