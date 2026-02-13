@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Award } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
 const certifications = [
   {
@@ -11,36 +11,42 @@ const certifications = [
     issuer: "ISTQB",
     date: "Credential Verification",
     verifyLink: "https://scr.istqb.org/?name=Ravindu+Heshan+Haputhanthri&number=SL-CTFL-2505-6265",
+    image: "/certifications/ISTQB.jpg",
   },
   {
     title: "Selenium WebDriver with Java",
     issuer: "Udemy",
     date: "Certificate",
     verifyLink: "https://www.udemy.com/certificate/UC-fab94232-7469-4a96-b53b-a16d42c50710/",
+    image: "/certifications/Selenium.jpg",
   },
   {
     title: "Cucumber BDD with Java",
     issuer: "Udemy",
     date: "Certificate",
     verifyLink: "https://www.udemy.com/certificate/UC-9b41ab81-d9e4-43f4-9c36-d07428ff948f/",
+    image: "/certifications/Cucumber.jpg",
   },
   {
     title: "JMeter from Scratch",
     issuer: "Udemy",
     date: "Certificate",
     verifyLink: "https://www.udemy.com/certificate/UC-263c33d1-636f-4703-a4d6-e9ef9d75395c/",
+    image: "/certifications/JMeter.jpg",
   },
   {
     title: "Postman API Testing",
     issuer: "Udemy",
     date: "Certificate",
     verifyLink: "https://www.udemy.com/certificate/UC-060e6199-13f7-4130-ba33-61f83df5bf9b/",
+    image: "/certifications/Postman.jpg",
   },
   {
     title: "ETL & Data Warehousing",
     issuer: "Udemy",
     date: "Certificate",
     verifyLink: "https://www.udemy.com/certificate/UC-25e55701-b094-4ea4-8db5-20a11de492e5/",
+    image: "/certifications/ETL.jpg",
   },
   {
     title: "MySQL Certified Associate",
@@ -48,38 +54,43 @@ const certifications = [
     date: "Digital Badge",
     verifyLink:
       "https://catalog-education.oracle.com/ords/certview/sharebadge?id=DBE3884CF8ED30CE9318A24CE0B1D85D57AA33DFCD3F2E7ECF2386F78423D008",
+    image: "/certifications/MYSQLIMPOCA.png",
   },
   {
     title: "Docker Training",
     issuer: "KodeKloud",
     date: "Certificate",
     verifyLink: "https://learn.kodekloud.com/user/certificate/a77369f5-84b8-45dd-80b1-c7c36b2a4e31",
+    image: "/certifications/Docker.jpg",
   },
   {
     title: "AWS Cloud Quest",
     issuer: "AWS (Credly)",
     date: "Digital Badge",
     verifyLink: "https://www.credly.com/badges/df785279-a4e0-419c-8bfb-6c096b44c5d9/linked_in_profile",
+    image: "/certifications/AWS.png",
   },
   {
     title: "12 Factor App",
     issuer: "KodeKloud",
     date: "Certificate",
     verifyLink: "https://learn.kodekloud.com/certificate/266b0eac-6433-4d5d-8cb2-e54637068cfd",
+    image: "/certifications/12Factor.jpg",
   },
   {
     title: "Software Engineer Intern Certificate",
     issuer: "HackerRank",
     date: "Certificate",
     verifyLink: "https://www.hackerrank.com/certificates/23224133b801",
+    image: "/certifications/SE.png",
   },
   {
     title: "Java (Basic) Certificate",
     issuer: "HackerRank",
     date: "Certificate",
     verifyLink: "https://www.hackerrank.com/certificates/174c5d9e55d3",
+    image: "/certifications/Java.png",
   },
-  // Note: this list shows 12 items. The flip grid rotates through items automatically.
 ]
 
 export default function CertificationsSection() {
@@ -96,17 +107,12 @@ export default function CertificationsSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
+        if (entry.isIntersecting) setIsVisible(true)
       },
       { threshold: 0.1 },
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
@@ -116,25 +122,62 @@ export default function CertificationsSection() {
     const interval = setInterval(() => {
       setCardStates((prevStates) =>
         prevStates.map((state) => {
-          // If card is not flipped, flip it to show back side
-          if (!state.isFlipped) {
-            return { ...state, isFlipped: true }
-          } else {
-            // If card is flipped, update indices and flip back
-            const newFrontIndex = (state.backIndex + 4) % certifications.length
-            const newBackIndex = (newFrontIndex + 4) % certifications.length
-            return {
-              frontIndex: newFrontIndex,
-              backIndex: newBackIndex,
-              isFlipped: false,
-            }
-          }
+          if (!state.isFlipped) return { ...state, isFlipped: true }
+
+          const newFrontIndex = (state.backIndex + 4) % certifications.length
+          const newBackIndex = (newFrontIndex + 4) % certifications.length
+          return { frontIndex: newFrontIndex, backIndex: newBackIndex, isFlipped: false }
         }),
       )
-    }, 3000) // Show each side for 3 seconds
+    }, 3200)
 
     return () => clearInterval(interval)
   }, [isVisible, isPaused])
+
+  const CertFace = ({ cert }: { cert: (typeof certifications)[number] }) => {
+    return (
+      <Card className="absolute inset-0 w-full h-full backface-hidden hover:shadow-xl overflow-hidden flex flex-col">
+        {/* Image */}
+        <div className="p-4 pb-0">
+          <div className="rounded-xl border bg-background overflow-hidden">
+            <img
+              src={cert.image}
+              alt={`${cert.title} certificate`}
+              className="w-full h-28 md:h-32 object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        {/* Header */}
+        <CardHeader className="pt-3 pb-2 px-4 flex-1">
+          <CardTitle className="text-center text-sm md:text-base leading-snug line-clamp-2">
+            {cert.title}
+          </CardTitle>
+          <CardDescription className="text-center text-xs md:text-sm leading-snug mt-1">
+            <span className="font-medium text-foreground/90">{cert.issuer}</span>
+            <br />
+            <span className="text-muted-foreground">{cert.date}</span>
+          </CardDescription>
+        </CardHeader>
+
+        {/* Footer */}
+        <CardFooter className="px-4 pb-4 pt-0 justify-center">
+          <Button
+            variant="secondary"
+            size="sm"
+            className="h-9 px-3 w-full max-w-[220px] hover:bg-primary hover:text-primary-foreground transition-colors"
+            asChild
+          >
+            <a href={cert.verifyLink} target="_blank" rel="noopener noreferrer">
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Verify
+            </a>
+          </Button>
+        </CardFooter>
+      </Card>
+    )
+  }
 
   return (
     <section id="certifications" ref={sectionRef} className="py-20">
@@ -176,78 +219,38 @@ export default function CertificationsSection() {
                     transform: cardState.isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
                   }}
                 >
-                  {/* Front of card */}
-                  <Card
-                    className="absolute inset-0 w-full h-full backface-hidden hover:shadow-xl"
+                  {/* Front */}
+                  <div
+                    className="absolute inset-0 w-full h-full"
                     style={{
                       backfaceVisibility: "hidden",
                     }}
                   >
-                    <div className="relative overflow-hidden group p-6 lg:block hidden">
-                      <Award className="w-16 h-16 mx-auto text-primary mb-4" />
-                    </div>
-                    <CardHeader className="lg:pt-0 pt-6">
-                      <CardTitle className="text-center text-base">{frontCert.title}</CardTitle>
-                      <CardDescription className="text-center text-sm">
-                        {frontCert.issuer}
-                        <br />
-                        {frontCert.date}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardFooter className="justify-center">
-                      <Button
-                        variant="secondary"
-                        size="sm"
-                        className="hover:bg-primary hover:text-primary-foreground transition-colors"
-                        asChild
-                      >
-                        <a href={frontCert.verifyLink} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Verify
-                        </a>
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                    <CertFace cert={frontCert} />
+                  </div>
 
-                  {/* Back of card */}
-                  <Card
-                    className="absolute inset-0 w-full h-full backface-hidden hover:shadow-xl"
+                  {/* Back */}
+                  <div
+                    className="absolute inset-0 w-full h-full"
                     style={{
                       backfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
                     }}
                   >
-                    <div className="relative overflow-hidden group p-6 lg:block hidden">
-                      <Award className="w-16 h-16 mx-auto text-primary mb-4" />
-                    </div>
-                    <CardHeader className="lg:pt-0 pt-6">
-                      <CardTitle className="text-center text-base">{backCert.title}</CardTitle>
-                      <CardDescription className="text-center text-sm">
-                        {backCert.issuer}
-                        <br />
-                        {backCert.date}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardFooter className="justify-center">
-                      <Button
-                        variant="secondary"
-                        size="sm"
-                        className="hover:bg-primary hover:text-primary-foreground transition-colors"
-                        asChild
-                      >
-                        <a href={backCert.verifyLink} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Verify
-                        </a>
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                    <CertFace cert={backCert} />
+                  </div>
                 </div>
               </div>
             )
           })}
         </div>
       </div>
+
+      <style jsx global>{`
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+      `}</style>
     </section>
   )
 }

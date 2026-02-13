@@ -1,6 +1,7 @@
 "use client"
 
-import { Github, Linkedin, Mail, Download } from "lucide-react"
+import { Github, Linkedin, Download } from "lucide-react"
+import { SiStackoverflow, SiUpwork } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -8,12 +9,31 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com/ravinduheshan99" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/ravindu-haputhanthri/" },
-  { icon: Mail, label: "Email", href: "mailto:ravinduheshan99@gmail.com" },
+  {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/ravinduheshan99",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ravindu-haputhanthri-307b23213/",
+  },
+  {
+    icon: SiStackoverflow,
+    label: "Stack Overflow",
+    href: "https://stackoverflow.com/users/31926856/ravindu-haputhanthri",
+  },
+  {
+    icon: SiUpwork,
+    label: "Upwork",
+    href: "https://www.upwork.com/freelancers/~01b219cb54a8fcc78f",
+  },
 ]
 
-const cvDownloads = [{ label: "QA Engineer CV", href: "CV/Ravindu Haputhanthri - QA Engineer.pdf" }]
+const cvDownloads = [
+  { label: "QA Engineer CV", href: "CV/Ravindu Haputhanthri - QA Engineer.pdf" },
+]
 
 export default function ContactSection() {
   return (
@@ -21,41 +41,47 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-balance bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent relative">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-balance bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               Contact Me
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty leading-relaxed max-w-3xl mx-auto">
-              If you need reliable QA support for a web product, I can help with manual and exploratory testing, test
-              automation, API validation, performance checks, and release readiness. I work with both local and
-              international clients and keep communication clear, practical, and outcome-focused.
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              I provide freelance Quality Assurance services including manual testing, automation framework
+              development, API validation, performance testing, and release verification. If you need reliable QA
+              support for your web product, feel free to reach out.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-start">
-            {/* Left: Contact form */}
+            {/* Contact Form */}
             <Card className="border-2">
               <CardHeader>
-                <CardTitle className="text-xl">Send a message</CardTitle>
+                <CardTitle className="text-xl">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form
                   className="space-y-5"
-                  action="https://formspree.io/f/yourFormId"
+                  action="https://formspree.io/f/xbdagagr"
                   method="POST"
                 >
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New message from Ravindu Portfolio"
+                  />
+
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full name</Label>
-                    <Input id="name" name="name" placeholder="Your name" required />
+                    <Label htmlFor="name">Full Name</Label>
+                    <Input id="name" name="name" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email address</Label>
-                    <Input id="email" name="email" type="email" placeholder="you@example.com" required />
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input id="email" name="email" type="email" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" name="subject" placeholder="Project inquiry" />
+                    <Input id="subject" name="subject" required />
                   </div>
 
                   <div className="space-y-2">
@@ -63,7 +89,6 @@ export default function ContactSection() {
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell me about the product, timelines, and what you need tested."
                       className="min-h-[140px]"
                       required
                     />
@@ -73,37 +98,30 @@ export default function ContactSection() {
                     Submit
                   </Button>
                 </form>
-
-                <p className="text-xs text-muted-foreground mt-4">
-                  Tip: Replace <span className="font-medium">yourFormId</span> with your Formspree form ID (or swap the
-                  action URL for your preferred form backend).
-                </p>
               </CardContent>
             </Card>
 
-            {/* Right: CV + socials */}
+            {/* CV + Social Links */}
             <div className="space-y-8">
               <Card className="border-2">
                 <CardHeader>
                   <CardTitle className="text-xl">Download CV</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-4">
-                    {cvDownloads.map((cv, index) => (
-                      <Button
-                        key={index}
-                        variant="outline"
-                        size="lg"
-                        className="hover:scale-110 transition-all duration-300 bg-transparent border-2 hover:text-[var(--color-devops-qa)] hover:bg-[var(--color-devops-qa)]/10"
-                        asChild
-                      >
-                        <a href={cv.href} download aria-label={`Download ${cv.label}`}>
-                          <Download className="w-6 h-6 mr-2" />
-                          {cv.label}
-                        </a>
-                      </Button>
-                    ))}
-                  </div>
+                  {cvDownloads.map((cv, index) => (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="lg"
+                      className="hover:scale-105 transition-all duration-300 bg-transparent border-2"
+                      asChild
+                    >
+                      <a href={cv.href} download>
+                        <Download className="w-6 h-6 mr-2" />
+                        {cv.label}
+                      </a>
+                    </Button>
+                  ))}
                 </CardContent>
               </Card>
 
@@ -112,41 +130,33 @@ export default function ContactSection() {
                   <CardTitle className="text-xl">Connect</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap justify-start gap-4">
-                    {socials.map((social, index) => {
-                      const colors = [
-                        "hover:text-[var(--color-devops-qa)] hover:bg-[var(--color-devops-qa)]/10",
-                        "hover:text-[var(--color-devops-deploy)] hover:bg-[var(--color-devops-deploy)]/10",
-                        "hover:text-[var(--color-devops-flow)] hover:bg-[var(--color-devops-flow)]/10",
-                      ]
-                      return (
-                        <Button
-                          key={index}
-                          variant="outline"
-                          size="lg"
-                          className={`hover:scale-110 transition-all duration-300 bg-transparent border-2 h-10 w-10 md:h-20 md:w-20 ${
-                            colors[index] || "hover:text-accent hover:bg-accent/10"
-                          }`}
-                          asChild
+                  <div className="flex flex-wrap gap-4">
+                    {socials.map((social, index) => (
+                      <Button
+                        key={index}
+                        variant="outline"
+                        size="lg"
+                        className="hover:scale-110 transition-all duration-300 bg-transparent border-2 h-12 w-12 md:h-16 md:w-16"
+                        asChild
+                      >
+                        <a
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={social.label}
                         >
-                          <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                            <social.icon className="size-7 md:size-12" />
-                          </a>
-                        </Button>
-                      )
-                    })}
+                          <social.icon className="size-6 md:size-8" />
+                        </a>
+                      </Button>
+                    ))}
                   </div>
 
-                  <div className="mt-6 space-y-2 text-sm text-muted-foreground">
+                  <div className="mt-6 text-sm text-muted-foreground">
                     <p>
-                      <span className="font-medium text-foreground">Email:</span>{" "}
-                      <a className="underline underline-offset-4" href="mailto:ravinduheshan99@gmail.com">
-                        ravinduheshan99@gmail.com
-                      </a>
-                    </p>
-                    <p>
-                      <span className="font-medium text-foreground">Availability:</span> Freelance QA support for web
-                      apps, API testing, and automation work.
+                      <span className="font-medium text-foreground">
+                        Availability:
+                      </span>{" "}
+                      Open for freelance QA projects and automation consulting.
                     </p>
                   </div>
                 </CardContent>

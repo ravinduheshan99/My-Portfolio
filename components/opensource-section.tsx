@@ -58,17 +58,12 @@ export default function OpenSourceSection() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
+        if (entry.isIntersecting) setIsVisible(true)
       },
       { threshold: 0.1 },
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
@@ -86,9 +81,7 @@ export default function OpenSourceSection() {
             <UpworkIcon className="w-10 h-10 text-primary hidden md:block" />
             <h2 className="text-4xl lg:text-5xl font-bold text-balance">
               Freelance{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Journey
-              </span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Journey</span>
             </h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
@@ -97,6 +90,7 @@ export default function OpenSourceSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {/* Left: Project details (with Upwork.png logo) */}
           {projects.map((project, index) => (
             <Card
               key={index}
@@ -107,23 +101,28 @@ export default function OpenSourceSection() {
             >
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
-                  <UpworkIcon className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors" />
-                  <Badge variant="secondary" className="text-xs">
-                    {project.role}
-                  </Badge>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg border bg-background overflow-hidden flex items-center justify-center">
+                      <img
+                        src="/work_experience/Upwork.png"
+                        alt="Upwork logo"
+                        className="w-full h-full object-contain p-2"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <Badge variant="secondary" className="text-xs">
+                      {project.role}
+                    </Badge>
+                  </div>
                 </div>
-                <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                  {project.name}
-                </CardTitle>
-                <CardDescription className="text-sm">
-                  {project.description}
-                </CardDescription>
+
+                <CardTitle className="text-lg group-hover:text-primary transition-colors">{project.name}</CardTitle>
+                <CardDescription className="text-sm">{project.description}</CardDescription>
               </CardHeader>
 
               <CardContent>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {project.contributions}
-                </p>
+                <p className="text-sm text-muted-foreground mb-4">{project.contributions}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, i) => (
@@ -148,7 +147,7 @@ export default function OpenSourceSection() {
             </Card>
           ))}
 
-          {/* Client Feedback Card */}
+          {/* Right: Client feedback (NO logo inside this card) */}
           <Card
             className={`transition-all duration-500 hover:shadow-xl ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -157,31 +156,22 @@ export default function OpenSourceSection() {
           >
             <CardHeader>
               <div className="flex items-start justify-between mb-2">
-                <UpworkIcon className="w-8 h-8 text-muted-foreground" />
                 <Badge variant="secondary" className="text-xs">
                   Client Feedback
                 </Badge>
               </div>
               <CardTitle className="text-lg">Upwork Review</CardTitle>
-              <CardDescription className="text-sm">
-                Verified 5-Star Rating
-              </CardDescription>
+              <CardDescription className="text-sm">Verified 5-Star Rating</CardDescription>
             </CardHeader>
 
             <CardContent>
-              {/* 5 Filled Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: feedback.rating }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-yellow-500 fill-yellow-500"
-                  />
+                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
                 ))}
               </div>
 
-              <p className="text-sm text-muted-foreground mb-4">
-                {feedback.quote}
-              </p>
+              <p className="text-sm text-muted-foreground mb-4">{feedback.quote}</p>
 
               <Button
                 variant="ghost"

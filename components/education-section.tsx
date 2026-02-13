@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -21,6 +21,7 @@ const education = [
       "Vice President, Statistics and Computer Science Student’s Association (SCSSA)",
     ],
     tags: ["Computer Science", "Algorithms", "Software Engineering", "Machine Learning", "Data Analysis", "Leadership"],
+    logo: "/education/UOK.png",
   },
   {
     institution: "Institute of Computer Engineering Technology (iCET)",
@@ -31,6 +32,7 @@ const education = [
       "Completed an industry-oriented diploma focused on practical software development and enterprise application design, with strong hands-on project exposure and structured engineering practices.",
     achievements: ["Completed"],
     tags: ["Java", "OOP", "Design Patterns", "DSA", "MySQL", "REST APIs", "JDBC", "SDLC"],
+    logo: "/education/iCET.png",
   },
   {
     institution: "ESOFT Metro Campus",
@@ -41,6 +43,7 @@ const education = [
       "Completed a foundational IT diploma with extensive practical exposure across core IT modules and programming fundamentals, including a mandatory Windows application project using C#.NET.",
     achievements: ["Completed | 242 theory hours and 220 practical hours", "Final Project: Windows application using C#.NET"],
     tags: ["IT Fundamentals", "Networking", "Python", "Database Concepts", "C#.NET", "Web Design Basics"],
+    logo: "/education/ESOFT.png",
   },
   {
     institution: "ESOFT Metro Campus",
@@ -51,6 +54,7 @@ const education = [
       "Strengthened academic and professional English communication skills, including structured writing, presentations, and business-oriented communication.",
     achievements: ["Completed"],
     tags: ["Professional Communication", "Presentation Skills", "Business English", "Writing"],
+    logo: "/education/ESOFT.png",
   },
   {
     institution: "St. Anthony's College, Kandy",
@@ -67,6 +71,7 @@ const education = [
       "Secretary, Science and Mathematics Society",
     ],
     tags: ["Leadership", "Teamwork", "Cricket", "Discipline", "Communication"],
+    logo: "/education/SACK.png",
   },
 ]
 
@@ -83,18 +88,18 @@ export default function EducationSection() {
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true)
-      }
-    }, { threshold: 0.1 })
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true)
+      },
+      { threshold: 0.1 },
+    )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
+
+  const title = useMemo(() => "Education", [])
 
   return (
     <section id="education" ref={sectionRef} className="py-20">
@@ -106,7 +111,7 @@ export default function EducationSection() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <GraduationCap className="w-10 h-10 text-primary hidden md:block" />
-            <h2 className="text-4xl lg:text-5xl font-bold text-balance">Education</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-balance">{title}</h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
             My academic background and professional certifications
@@ -123,12 +128,26 @@ export default function EducationSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex-1">
-                    <CardTitle className="text-2xl mb-2">{item.degree}</CardTitle>
-                    <CardDescription className="text-base">{item.institution}</CardDescription>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                  <div className="flex gap-4 flex-1">
+                    {/* Institute logo */}
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg border bg-background overflow-hidden flex items-center justify-center shrink-0">
+                      <img
+                        src={item.logo}
+                        alt={`${item.institution} logo`}
+                        className="w-full h-full object-contain p-2"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-1">{item.degree}</CardTitle>
+                      <CardDescription className="text-base">{item.institution}</CardDescription>
+                      <p className="text-sm text-muted-foreground mt-2">{item.field}</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
+
+                  <div className="flex items-center gap-2 md:pt-1">
                     <div className="text-sm font-semibold text-primary whitespace-nowrap">{item.duration}</div>
 
                     {/* Mobile toggle button */}
@@ -138,6 +157,7 @@ export default function EducationSection() {
                         size="sm"
                         onClick={() => toggleExpand(index)}
                         className="flex items-center p-1"
+                        aria-label={expandedItems[index] ? "Collapse details" : "Expand details"}
                       >
                         {expandedItems[index] ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                       </Button>
@@ -145,30 +165,34 @@ export default function EducationSection() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                {/* <p className="text-muted-foreground mb-4">{item.description}</p> */}
 
+              <CardContent>
                 {/* Details section - hidden on mobile by default, always visible on desktop */}
-                <div className={`grid md:grid-cols-2 gap-4 mb-4 ${expandedItems[index] ? "block" : "hidden"} md:grid`}>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-sm">Achievements:</h4>
-                    <ul className="space-y-1">
-                      {item.achievements.map((achievement, i) => (
-                        <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-sm">Skills:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag, i) => (
-                        <Badge key={i} variant="secondary">
-                          {tag}
-                        </Badge>
-                      ))}
+                <div className={`${expandedItems[index] ? "block" : "hidden"} md:block`}>
+                  <p className="text-muted-foreground mb-4">{item.description}</p>
+
+                  <div className="grid md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <h4 className="font-semibold mb-2 text-sm">Achievements:</h4>
+                      <ul className="space-y-1">
+                        {item.achievements.map((achievement, i) => (
+                          <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold mb-2 text-sm">Skills:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {item.tags.map((tag, i) => (
+                          <Badge key={i} variant="secondary">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

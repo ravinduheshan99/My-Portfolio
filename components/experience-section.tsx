@@ -9,6 +9,7 @@ import { Briefcase, ChevronDown, ChevronUp } from "lucide-react"
 const experience = [
   {
     company: "Upwork",
+    logo: "/work_experience/Upwork.png",
     position: "Freelance QA Engineer (Part-time)",
     employmentType: "Part-time",
     location: "Remote",
@@ -28,6 +29,7 @@ const experience = [
   },
   {
     company: "IFS R&D International",
+    logo: "/work_experience/IFS.png",
     position: "Software Engineer – Quality Assurance (Trainee → Associate)",
     employmentType: "Full-time",
     location: "Colombo, Sri Lanka",
@@ -48,35 +50,25 @@ const experience = [
   },
   {
     company: "Vithanage Enterprises Pvt (Ltd)",
+    logo: "/work_experience/Vithanage Enterprises.jpg",
     position: "Branch Manager",
     employmentType: "Full-time",
     location: "Kandy District, Central Province, Sri Lanka (On-site)",
     duration: "Jul 2020 - Jul 2021",
     description:
       "Managed branch operations including distribution, customer service, administration, and sales. Coordinated day-to-day activities to ensure efficient execution, consistent service standards, and smooth branch performance.",
-    tags: [
-      "Operations Management",
-      "Customer Service",
-      "Administration",
-      "Sales Coordination",
-      "Team Coordination",
-    ],
+    tags: ["Operations Management", "Customer Service", "Administration", "Sales Coordination", "Team Coordination"],
   },
   {
     company: "ESOFT Metro Campus",
+    logo: "/work_experience/ESOFT.png",
     position: "IT Lab Instructor",
     employmentType: "Full-time",
     location: "Kandy District, Central Province, Sri Lanka (On-site)",
     duration: "Feb 2020 - May 2020",
     description:
       "Supported student lab activities by supervising and scheduling exams, assisting students with C# programming project issues, and maintaining lab facilities to ensure a smooth learning environment.",
-    tags: [
-      "Lab Supervision",
-      "Exam Coordination",
-      "Student Support",
-      "C# Support",
-      "IT Lab Maintenance",
-    ],
+    tags: ["Lab Supervision", "Exam Coordination", "Student Support", "C# Support", "IT Lab Maintenance"],
   },
 ]
 
@@ -86,26 +78,21 @@ export default function ExperienceSection() {
   const sectionRef = useRef<HTMLElement>(null)
 
   const toggleExpand = (index: number) => {
-    setExpandedItems(prev => ({
+    setExpandedItems((prev) => ({
       ...prev,
-      [index]: !prev[index]
+      [index]: !prev[index],
     }))
   }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
+        if (entry.isIntersecting) setIsVisible(true)
       },
       { threshold: 0.1 },
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
@@ -137,18 +124,35 @@ export default function ExperienceSection() {
             >
               <CardHeader>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                  <div className="flex-1">
-                    <CardTitle className="text-2xl mb-2">{item.position}</CardTitle>
-                    <CardDescription className="text-base mb-2">{item.company}</CardDescription>
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium">Type:</span> {item.employmentType}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium">Location:</span> {item.location}
-                      </span>
+                  <div className="flex items-start gap-4 flex-1">
+                    {/* Logo */}
+                    <div className="shrink-0">
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg border bg-background flex items-center justify-center overflow-hidden">
+                        <img
+                          src={item.logo}
+                          alt={`${item.company} logo`}
+                          className="w-full h-full object-contain p-2"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Text */}
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl mb-2">{item.position}</CardTitle>
+                      <CardDescription className="text-base mb-2">{item.company}</CardDescription>
+                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                        <span className="flex items-center gap-1">
+                          <span className="font-medium">Type:</span> {item.employmentType}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <span className="font-medium">Location:</span> {item.location}
+                        </span>
+                      </div>
                     </div>
                   </div>
+
+                  {/* Right side */}
                   <div className="flex items-center gap-2">
                     <div className="text-sm font-semibold text-primary whitespace-nowrap">{item.duration}</div>
 
@@ -160,20 +164,17 @@ export default function ExperienceSection() {
                         onClick={() => toggleExpand(index)}
                         className="flex items-center p-1"
                       >
-                        {expandedItems[index] ? (
-                          <ChevronUp className="w-4 h-4" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
+                        {expandedItems[index] ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                       </Button>
                     </div>
                   </div>
                 </div>
               </CardHeader>
+
               <CardContent>
-                {/* Details section - hidden on mobile by default, always visible on desktop */}
                 <div className={`${expandedItems[index] ? "block" : "hidden"} md:block`}>
                   <p className="text-muted-foreground mb-4">{item.description}</p>
+
                   <div className="grid md:grid-cols-1 gap-4 mb-4">
                     <div>
                       <h4 className="font-semibold mb-2 text-sm">Skills:</h4>
