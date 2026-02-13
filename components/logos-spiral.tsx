@@ -172,7 +172,7 @@ export default function DragonInfinity({ isDark }: DragonInfinityProps) {
 
           {/* Profile photo - 5x larger on mobile, 1.5x on desktop */}
           <div className="relative w-[1120px] h-[1120px] sm:w-[480px] sm:h-[480px] md:w-[576px] md:h-[576px] lg:w-[672px] lg:h-[672px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl backdrop-blur-sm">
-            <img src="/me.jpg" alt="Yugan Kavinda" className="w-full h-full object-cover" />
+            <img src="/me.JPG" alt="Ravindu Haputhanthri" className="w-full h-full object-cover" />
           </div>
         </div>
       </Html>

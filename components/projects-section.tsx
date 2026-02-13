@@ -153,7 +153,7 @@ const projects = [
     title: "Database-Driven Test Automation – MySQL + Selenium (JDBC)",
     description:
       "Database-driven Selenium automation using MySQL with JDBC for runtime test data. Includes programmatic database and table setup, structured scenario tables, centralized credential management, and data-driven workflows for flexible, scalable test execution.",
-    image: "projects/Database-Driven Test Automation – MySQL + Selenium.png",
+    image: "projects/Database-Driven Test Automation.png",
     tags: [
       "Selenium WebDriver",
       "MySQL",
