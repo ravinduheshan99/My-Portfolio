@@ -58,7 +58,7 @@ export default function Header() {
                 backfaceVisibility: "hidden",
               }}
             >
-              <img src="/logo.png" alt="YK Logo" className="w-full h-full rounded-full" />
+              <img src="/logo.png" alt="RH Logo" className="w-full h-full rounded-full" />
             </div>
 
             {/* Back - Photo */}
@@ -69,7 +69,7 @@ export default function Header() {
                 transform: "rotateY(180deg)",
               }}
             >
-              <img src="/me.jpg" alt="Your Photo" className="w-full h-full rounded-full object-cover" />
+              <img src="/me.JPG" alt="Your Photo" className="w-full h-full rounded-full object-cover" />
             </div>
           </div>
         </button>
